@@ -5,9 +5,7 @@ import edu.unlam.crypto.trivium.loader.ImageLoader;
 
 import java.io.IOException;
 
-/**
- * Created by facundo on 18/6/17.
- */
+
 
 public class TriviumEncrypter implements Encrypter
 {

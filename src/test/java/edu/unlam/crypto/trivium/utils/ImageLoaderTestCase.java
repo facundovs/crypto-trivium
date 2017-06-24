@@ -15,9 +15,6 @@ import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * Created by facundo on 17/6/17.
- */
 
 @RunWith(Parameterized.class)
 public class ImageLoaderTestCase {

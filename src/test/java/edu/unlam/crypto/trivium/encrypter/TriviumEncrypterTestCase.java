@@ -1,4 +1,4 @@
-package edu.unlam.crypto.trivium.utils;
+package edu.unlam.crypto.trivium.encrypter;
 
 import edu.unlam.crypto.trivium.encrypter.TriviumEncrypter;
 import edu.unlam.crypto.trivium.loader.ImageLoader;
@@ -13,10 +13,6 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-
-/**
- * Created by facundo on 18/6/17.
- */
 
 @RunWith(Parameterized.class)
 public class TriviumEncrypterTestCase

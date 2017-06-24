@@ -4,9 +4,7 @@ import java.io.*;
 
 import static org.apache.commons.io.IOUtils.toByteArray;
 
-/**
- * Created by facundo on 17/6/17.
- */
+
 public class ImageLoader
 {
 
