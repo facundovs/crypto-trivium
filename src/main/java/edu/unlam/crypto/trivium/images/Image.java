@@ -6,11 +6,13 @@ public class Image
 
     private byte [] body;
     private byte [] header;
+    private byte [] allBytes;
 
-    public Image(byte[] body, byte[] header)
+    public Image(byte [] allBytes, byte[] body, byte[] header)
     {
         this.body = body;
         this.header = header;
+        this.allBytes = allBytes;
     }
 
     public byte[] getBody()
@@ -33,8 +35,9 @@ public class Image
         this.header = header;
     }
 
-    public void getAllBytes ()
+    public byte [] getAllBytes ()
     {
-        //
+        return allBytes;
     }
+
 }

@@ -1,6 +1,8 @@
 package edu.unlam.crypto.trivium.generators;
 
 import static edu.unlam.crypto.trivium.constants.TriviumConstants.*;
+import static edu.unlam.crypto.trivium.utils.BitUtils.getBitFromPosition;
+import static edu.unlam.crypto.trivium.utils.BitUtils.setBitPosition;
 
 public class TriviumStateGenerator
 {
@@ -18,16 +20,15 @@ public class TriviumStateGenerator
         this.iv = iv;
     }
 
-    public byte [] generateState()
+    public void generateState()
     {
         generateFirstBlock();
         generateSecondBlock();
         convertByteToInt();
         mixBytes();
-        return state;
     }
 
-    private int generateBit()
+    public int generateBit()
     {
         int t1;
         int t2;
@@ -117,25 +118,6 @@ public class TriviumStateGenerator
     public byte[] getState()
     {
         return state;
-    }
-
-    private int getBitFromPosition (byte byteValue, int position)
-    {
-        position = 7 - position;
-        return (byteValue >> position) & 1;
-    }
-
-    private byte  setBitPosition(int bitValue, byte byteValue, int position)
-    {
-        position = 7 - position;
-        if(bitValue == 1)
-        {
-            return (byte) (byteValue | (1 << position)) ;
-        }
-        else
-        {
-            return (byte) (byteValue & ~(1 << position));
-        }
     }
 
     private void mixBytes()

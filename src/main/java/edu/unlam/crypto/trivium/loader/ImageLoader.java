@@ -8,7 +8,7 @@ import static org.apache.commons.io.IOUtils.toByteArray;
 public class ImageLoader
 {
 
-    public static Integer HEADER_LENGTH = 20;
+    public static Integer HEADER_LENGTH = 54;
 
     public byte [] getBytes(String fileName) throws IOException
     {
